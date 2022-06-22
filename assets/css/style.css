@@ -1,8 +1,5 @@
-/*
- * https://bilalbentoumi.github.io
- */
-
-@import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap');
+@import url('../fonts/HelveticaNowDisplay/HelveticaNowDisplay.css');
+@import url('./animations.css');
 
 html, body {
     height: 100%;
@@ -16,7 +13,7 @@ html {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Helvetica Now Display';
     font-weight: 300;
     text-decoration: none;
 }
@@ -27,8 +24,6 @@ html {
 
 .app {
     height: 100%;
-    --primary-color: #8873ef;
-    --primary-color-dark: #6d58cf;
 }
 
 .container {
@@ -40,7 +35,8 @@ html {
 .header {
     position: fixed;
     width: 100%;
-    z-index: 10;
+    z-index: 20;
+    animation: animation-header .6s linear;
 }
 
 .header.active {
@@ -54,12 +50,11 @@ html {
 }
 
 .header .container {
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-block: 40px;
-    padding-inline: 80px;
     transition: 75ms;
 }
 
@@ -85,11 +80,11 @@ html {
     font-weight: 500;
     font-size: 17px;
     padding-block: 15px;
-    transition: 75ms;
+    transition: 50ms;
 }
 
 .header .nav .nav-link:hover, .header .nav .nav-link.active {
-    color: var(--primary-color-dark);
+    color: #790efb;
 }
 
 /* Hero Section */
@@ -99,125 +94,142 @@ html {
     justify-content: space-between;
     gap: 120px;
     padding-top: 150px;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-section .bg-title {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: auto;
+    top: calc(60px + 5%);
+    z-index: 0;
+    padding: 0 40px;
+    -webkit-filter: drop-shadow(18px 18px 16px #f7f7f7);
+    filter: drop-shadow(18px 18px 16px #f7f7f7);
+}
+
+.hero-section .left {
+    padding-top: 100px;
 }
 
 .hero-section .intro span {
     display: block;
-    font-size: .875rem;
-    line-height: 1.25rem;
+    font-size: 14px;
+    line-height: 20px;
     letter-spacing: 8px;
     text-transform: uppercase;
-    padding-top: 5px;
-    padding-bottom: 20px;
-    color: #878a8f;
+    color: #878A8F;
+    animation: animation-1st .6s linear;
 }
 
 .hero-section .intro h1 {
-    font-size: 4.5rem;
-    line-height: 4.6875rem;
-    letter-spacing: -4px;
-    font-weight: 800;
-    padding-top: 1px;
-    padding-bottom: 4px;
+    font-size: 72px;
+    line-height: 75px;
+    letter-spacing: -1px;
+    font-weight: 700;
+    padding-top: 15px;
+    animation: animation-2nd .8s linear;
 }
 
 .hero-section .intro p {
     position: relative;
     font-size: 22px;
-    font-weight: 400;
-    line-height: 40px;
-    color: #878a8f;
+    font-weight: 500;
+    line-height: 30px;
+    color: #878A8F;
     margin-block-start: 20px;
     margin-block-end: 40px;
+    animation: animation-3rd 1s linear;
 }
 
-.hero-section .buttons {
+.hero-section .links {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 18px;
+    animation: animation-4th 1.2s linear;
 }
 
-.hero-section .buttons .btn {
-    display: inline-block;
-    background: var(--primary-color);
-    border-radius: 10px;
-    transition: 75ms;
-}
-
-@supports (-webkit-mask-image: paint(smooth-corners)){
-    .hero-section .buttons .btn {
-        --smooth-corners: 15, 2;
-        mask-image: paint(smooth-corners);
-        -webkit-mask-image: paint(smooth-corners);
-    }
-}
-
-.hero-section .buttons .btn:hover {
-    background: var(--primary-color-dark);
-}
-
-.hero-section .buttons .btn a {
+.hero-section .links .link {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    color: #fff;
-    font-weight: 500;
-    padding: 20px;
-}
-
-.hero-section .buttons .link {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
+    font-size: 18px;
+    line-height: 18px;
     padding-block: 15px;
-    color: #18171C;
+    color: #0F141E;
     font-weight: 600;
 }
 
-.hero-section .buttons .link:hover {
+.hero-section .links .link:hover {
     text-decoration: underline;
 }
 
-.hero-section .social-links {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-top: 40px;
-}
-
-.hero-section .social-links span {
+.hero-section .links .or {
+    font-size: 16px;
     font-weight: 500;
-}
-
-.hero-section .social-links .social-link {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background: #f1f1f1;
-    fill: #2e2c34 !important;
-    width: 56px;
-    height: 56px;
-    border-radius: 100%;
-    transition: 75ms;
-}
-
-.hero-section .social-links .social-link:hover {
-    background: #e7e7e7;
-    transform: scale(1.05);
+    color: #878A8F;
 }
 
 .hero-section .container img {
     max-height: 700px;
+    animation: animation-2nd .8s linear;
+}
+
+.scroll-to-block {
+    display: none;
+    justify-content: center;
+    margin-top: -50px;
+    position: relative;
+    z-index: 20;
+    animation: animation-5th 1.4s linear;
+}
+
+.scroll-to-link {
+    transition: all .25s;
+}
+
+.scroll-to-link:hover {
+    opacity: 0.4;
+}
+
+.scroll-to-icon {
+    width: 20px;
+    height: 30px;
+    box-shadow: inset 0 0 0 2px #0f141e;
+    border-radius: 25px;
+    transition: all .25s;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.scroll-to-icon:after {
+    content: '';
+    width: 4px;
+    height: 6px;
+    background: #0f141e;
+    margin-left: 8px;
+    top: 8px;
+    border-radius: 2px;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: scroll;
+    animation-name: scroll;
+    position: absolute;
+    transition: background .25s;
 }
 
 /* XS */
 @media (min-width: 0px) and (max-width: 639px) {
 
     .container {
-        width: 90%;
+        width: 90% !important;
     }
     .header .container {
-        padding-inline: 15px;
         padding-block: 15px;
     }
     .header .nav .toggle {
@@ -253,7 +265,7 @@ html {
 
 @media (min-width: 640px) and (max-width: 767px) {
     .container {
-        width: 90%;
+        width: 90% !important;
     }
     .header .nav .toggle {
         display: block;
@@ -269,7 +281,7 @@ html {
 /* MD */
 @media (min-width: 768px) and (max-width: 1023px) {
     .container {
-        width: 90%;
+        width: 90% !important;
     }
     .header .nav .toggle {
         display: block;
@@ -294,9 +306,15 @@ html {
     .hero-section .right {
         display: none;
     }
+    .scroll-to-block {
+        display: flex;
+        margin-top: 30px;
+    }
 }
 
 /* 2XL */
 @media (min-width: 1536px) {
-
+    .scroll-to-block {
+        display: flex;
+    }
 }
