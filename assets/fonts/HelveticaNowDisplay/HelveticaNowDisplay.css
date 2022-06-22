@@ -1,0 +1,31 @@
+@font-face {
+	font-family: 'Helvetica Now Display';
+	font-weight: 400;
+	font-style: normal;
+	src: url('eot/HelveticaNowDisplay-Regular.eot');
+	src: url('eot/HelveticaNowDisplay-Regular.eot?#iefix') format('embedded-opentype'), url('woff2/HelveticaNowDisplay-Regular.woff2') format('woff2'), url('woff/HelveticaNowDisplay-Regular.woff') format('woff'), url('ttf/HelveticaNowDisplay-Regular.ttf') format('truetype'), url('svg/HelveticaNowDisplay-Regular.svg#wf') format('svg');
+}
+
+@font-face {
+	font-family: "Helvetica Now Display";
+	font-weight: 500;
+	font-style: normal;
+	src: url('eot/HelveticaNowDisplay-Medium.eot');
+	src: url('eot/HelveticaNowDisplay-Medium.eot?#iefix') format('embedded-opentype'), url('woff2/HelveticaNowDisplay-Medium.woff2') format('woff2'), url('woff/HelveticaNowDisplay-Medium.woff') format('woff'), url('ttf/HelveticaNowDisplay-Medium.ttf') format('truetype'), url('svg/HelveticaNowDisplay-Medium.svg#wf') format('svg');
+}
+
+@font-face {
+	font-family: "Helvetica Now Display ";
+	font-weight: 700;
+	font-style: normal;
+	src: url('eot/HelveticaNowDisplay-Bold.eot');
+	src: url('eot/HelveticaNowDisplay-Bold.eot?#iefix') format('embedded-opentype'), url('woff2/HelveticaNowDisplay-Bold.woff2') format('woff2'), url('woff/HelveticaNowDisplay-Bold.woff') format('woff'), url('ttf/HelveticaNowDisplay-Bold.ttf') format('truetype'), url('svg/HelveticaNowDisplay-Bold.svg#wf') format('svg');
+}
+
+@font-face {
+	font-family: "Helvetica Now Display ";
+	font-weight: 800;
+	font-style: normal;
+	src: url('eot/HelveticaNowDisplay-ExtraBold.eot');
+	src: url('eot/HelveticaNowDisplay-ExtraBold.eot?#iefix') format('embedded-opentype'), url('woff2/HelveticaNowDisplay-ExtraBold.woff2') format('woff2'), url('woff/HelveticaNowDisplay-ExtraBold.woff') format('woff'), url('ttf/HelveticaNowDisplay-ExtraBold.ttf') format('truetype'), url('svg/HelveticaNowDisplay-ExtraBold.svg#wf') format('svg');
+}
