@@ -225,7 +225,6 @@ html {
 
 /* XS */
 @media (min-width: 0px) and (max-width: 639px) {
-
     .container {
         width: 90% !important;
     }
@@ -240,6 +239,10 @@ html {
     }
     .hero-section .container {
         padding-top: 100px;
+    }
+    .hero-section .bg-title {
+        -webkit-filter: drop-shadow(8px 8px 10px #0002);
+        filter: drop-shadow(8px 8px 10px #0002);
     }
     .hero-section .intro span {
         font-size: 20px !important;
