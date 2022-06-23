@@ -108,6 +108,7 @@ html {
     padding: 0 40px;
     -webkit-filter: drop-shadow(18px 18px 16px #f7f7f7);
     filter: drop-shadow(18px 18px 16px #f7f7f7);
+    animation: animation-bg-title .8s linear;
 }
 
 .hero-section .left {
@@ -241,8 +242,8 @@ html {
         padding-top: 100px;
     }
     .hero-section .bg-title {
-        -webkit-filter: drop-shadow(8px 8px 10px #0002);
-        filter: drop-shadow(8px 8px 10px #0002);
+        -webkit-filter: drop-shadow(4px 2px 12px #0001);
+        filter: drop-shadow(4px 2px 12px #0001);
     }
     .hero-section .intro span {
         font-size: 20px !important;
