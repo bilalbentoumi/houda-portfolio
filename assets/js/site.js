@@ -1,9 +1,5 @@
 $(document).ready(function (){
 
-    if (CSS && 'paintWorklet' in CSS) {
-        CSS.paintWorklet.addModule('https://unpkg.com/smooth-corners')
-    }
-
     $(window).scroll(function (){
 
         const scrollTop = $(window).scrollTop();
@@ -22,7 +18,7 @@ $(document).ready(function (){
             const sectionTop = $(this).offset().top;
             const sectionHeight = $(this).height();
 
-            if (scrollTop >= sectionTop - (sectionHeight / 2)) {
+            if (scrollTop >= sectionTop - 200) {
                 current = $(this).attr("id");
             }
 
