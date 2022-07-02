@@ -16,7 +16,6 @@ $(document).ready(function (){
         $('.section').each(function (){
 
             const sectionTop = $(this).offset().top;
-            const sectionHeight = $(this).height();
 
             if (scrollTop >= sectionTop - 200) {
                 current = $(this).attr("id");
