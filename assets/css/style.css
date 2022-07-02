@@ -42,20 +42,9 @@ a:hover {
 
 /* Header */
 .header {
-    position: fixed;
     width: 100%;
     z-index: 20;
     animation: animation-header .6s linear;
-}
-
-.header.active {
-    box-shadow: 0 0 10px #0001;
-    background: #fffe;
-    backdrop-filter: blur(20px);
-}
-
-.header.active .container {
-    padding-block: 15px;
 }
 
 .header .container {
@@ -92,7 +81,7 @@ a:hover {
     transition: 50ms;
 }
 
-.header .nav .nav-link:hover, .header .nav .nav-link.active {
+.header .nav .nav-link:hover {
     color: #790efb;
 }
 
@@ -102,7 +91,6 @@ a:hover {
     align-items: center;
     justify-content: space-between;
     gap: 120px;
-    padding-top: 150px;
     position: relative;
     z-index: 10;
 }
@@ -344,6 +332,18 @@ a:hover {
 .footer .projects a, .footer .social-links a {
     display: block;
     margin-bottom: 5px;
+}
+
+/* Lazy Load */
+.lazy-load {
+    visibility: hidden !important;
+   opacity: 0 !important;
+}
+
+.lazy-load.active {
+    visibility: visible !important;
+    opacity: 1 !important;
+    animation: lazy-load .4s linear;
 }
 
 
